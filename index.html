@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shutterthrill</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="one.png">
+</head>
+<body>
+    
+    <div class="container">
+        <header class="active" id="navbar">
+            <a href="http://www.shutterthrill.com" class = "logo"><img class="logoImg" src="final.jpg"><span class = "name">Shutterthrill</span></a>
+            <ul>
+                <li><a  class="active">Aahann Kunddu</a></li>
+                <li><a ><img src="call.png">\<img src="whatsapp.png" width="22px" height="22px">+91-8851375055</a></li>
+                
+            </ul>
+            <span class="menuIcon" onclick="menuToggle();"></span>
+        </header>
+        <div class="content">
+            <div class="bannerText" id="slideshowText">
+                <div class="active">
+                    <h2>Capturing Moments... <br> You Cherish!</h2>
+                    <p>A passionate photographer with an eye for detail & quality got me started since 2014, hence culminating in structured photographic training program.<br><br>We at Shutterthrill, strive to provide personalized service to our esteemed clients.<br><br>With our photographic skills we click the moment, which will be nostalgic, for sure.</p>
+                    
+                    <ul class="bullet">
+                        <li>Pre Wedding</li>
+                        <li>Candid Wedding</li>
+                        <li>Outdoor</li>
+                        <li>Event</li>
+                        <li>Model Shoot</li>          
+                        <li>Product</li>
+                    </ul>
+                    
+                </div>
+            </div>
+            <div class="bannerImg" id = "slideshow">
+                <img src="img2.jpg" class="active">
+            </div>
+        </div>
+        <div class="icons">
+            <ul class="sci">
+                <li><a href="https://api.whatsapp.com/send?phone=+918851375055"><img src="whatsapp.png"></a></li>
+                <li><a href="https://www.instagram.com/shutterthrill/"><img src="instagram.png"></a></li>
+                <li><a href="https://www.facebook.com/shutterthrill"><img src="facebook.png"></a></li>
+                <li><a href="mailto:moments@shutterthrill.com"><img src="email.png"></a></li>
+                
+            </ul>
+            <ul>
+                <p>More to follow...</p>
+            </ul>
+            <!-- <ul class="controls">
+                <li>Pre Wedding</li>
+                <li>Candid Wedding</li>
+                <li>Outdoor</li>
+                <li>Event</li>
+                <li>Model Shoot</li>          
+                <li>Product</li>
+             </ul> -->
+        </div>
+    </div>
+    <div class="socialright">
+        <ul>
+            <li><a href="https://api.whatsapp.com/send?phone=+918851375055"><img src="whatsapp.png">
+                
+            </a></li>
+                <li><a href="https://www.instagram.com/shutterthrill/"><img src="instagram.png"></a></li>
+                <li><a href="https://www.facebook.com/shutterthrill"><img src="facebook.png"></a></li>
+                <li><a href="mailto:moments@shutterthrill.com"><img src="email.png"></a></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        var slideshow = document.getElementById('slideshow');
+        var slides = slideshow.getElementsByTagName('img');
+        var index = 0;
+
+        function nextSlide(){
+            slides[index].classList.remove('active');
+            index = (index+1)%slides.length;
+            slides[index].classList.add('active');
+        }
+        function prevSlide(){
+            slides[index].classList.remove('active');
+            index = ( index - 1 + slides.length)%slides.length;
+            slides[index].classList.add('active');
+        }
+
+        var slideshowText = document.getElementById('slideshowText');
+        var slidesText = slideshowText.getElementsByTagName('div');
+        var i = 0;
+
+        function nextSlideText(){
+            slidesText[i].classList.remove('active');
+            i = (i+1)%slidesText.length;
+            slidesText[i].classList.add('active');
+        }
+        function prevSlideText(){
+            slidesText[i].classList.remove('active');
+            i = ( i - 1 + slidesText.length)%slidesText.length;
+            slidesText[i].classList.add('active');
+        }
+        function  menuToggle(){
+            var nav = document.getElementById('navbar');
+            nav.classList.toggle('active');
+
+        }
+    </script>
+</body>
+<footer id = "footer">
+    <div class = "end" >
+        <p>© Copyright 2020 Shutterthrill - All Rights Reserved || Developed by Aman Srivastava @aman4863@gmail.com</p>
+    </div>
+</footer>
+</html>
